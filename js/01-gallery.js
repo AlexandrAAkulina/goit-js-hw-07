@@ -17,7 +17,7 @@ galleryEl.insertAdjacentHTML('beforeend', galleryMarkup);
 function createGallery(items) {
      return items.map(({ preview, original, description }) => {
         return `<div class="gallery__item">
-      <a class="gallery__link" href="${original.value}">
+      <a class="gallery__link" href="${original}">
         <img
           class="gallery__image"
           src="${preview}"
@@ -37,8 +37,9 @@ function onGalleryClick(event) {
         const source = event.target.dataset.source;
         const instance = basicLightbox.create(`
     <img src="${source}"width="1400" height="800">`);
-
         instance.show();
     }
 }
+
+
 console.log(galleryItems);
