@@ -33,14 +33,13 @@ function createGallery(items) {
 function onGalleryClick(event) {
     event.preventDefault();
 
-    if (event.target.classList.contains('gallery__image')) {
+  if (event.target.classList.contains('gallery__image')) {
       const source = event.target.dataset.source;
       const imgDescr = event.target.getAttribute('alt');
         const instance = basicLightbox.create(`
     <img src="${source}" alt="${imgDescr} width="1400" height="800">`);
         instance.show();
-    }
-}
+}}
 
 
 console.log(galleryItems);
